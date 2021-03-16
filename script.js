@@ -36,9 +36,10 @@ let h1 = document.querySelector('header h1')
   
 
 // EX8.: Write a function to change the page background color
+
 let body = document.body;
 const changeBodyColor = () =>  body.style.backgroundColor = "tomato "
-   changeBodyColor()
+//    changeBodyColor()
 
 
 // EX9.: Write a function to change the footer address with a fake one
@@ -51,16 +52,44 @@ let address = document.querySelector('#address');
 
 // EX10.: Write a function to add a CSS class to every Amazon link
 
-let links = document.querySelector('a');
-    const addClass = () =>  links.classList.add("buy")
-    addClass()
+    let links = document.querySelector('a');
+        const addClass = () =>  links.classList.add("buy")
+        addClass()
 
 
 // EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
-    
-let img = document.querySelector('img');
-        const toggleClass = () =>  img.classList.toggle("hide")
-        toggleClass()
 
-// EX12: Write a function to color the price of each product in a different one every time it's invoked
+    //RE-DONE 
+
+    let images = document.querySelectorAll('table img')
+const selectImg = () => {
+    for(let i = 0; i<images.length; i++ ){
+        images[i].classList.toggle("show")
+    }
+}   
+    selectImg()
+
+
+// EX12: Write a function to color the price of each product in a different color every time it's invoked
+// Use code for random number
+
+    
+       const genRandColor = () => {
+            let prices = document.getElementsByClassName("price");
+            let red = Math.floor(Math.random()* 256)
+            let green = Math.floor(Math.random()* 256)
+            let blue = Math.floor(Math.random()* 256)
+            return  prices.style.color = `rgb(${red}, ${green}, ${blue})`
+       }
+        genRandColor()
+
+
+
+
+        
+
+
+
+
+
 

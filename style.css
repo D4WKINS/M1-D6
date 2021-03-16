@@ -18,6 +18,9 @@ img {width:324px;}
 .hide{
     visibility:hidden;
 }
+.show{
+    visibility:visible;
+}
 
 p {width:600px; }
 
