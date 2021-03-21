@@ -75,11 +75,13 @@ const selectImg = () => {
 
     
        const genRandColor = () => {
-            let prices = document.getElementsByClassName("price");
+            let prices = document.getElementsByClassName("price")
             let red = Math.floor(Math.random()* 256)
             let green = Math.floor(Math.random()* 256)
             let blue = Math.floor(Math.random()* 256)
-            return  prices.style.color = `rgb(${red}, ${green}, ${blue})`
+            for(let i = 0; i < prices.length; i++){
+                prices[i].style.color = `rgb(${red}, ${green}, ${blue})`
+            }
        }
         genRandColor()
 
